@@ -288,6 +288,10 @@ header label span{
                 </li>
                 <li>
                     <a href="#" class="dec"><span class="las la-clipboard-list"></span>
+                        <span>Manage Houses House</span></a>
+                </li>
+                <li>
+                    <a href="#" class="dec"><span class="las la-clipboard-list"></span>
                         <span>Manage House Applications</span></a>
                 </li>
                 <li>
