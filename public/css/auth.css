@@ -1,0 +1,54 @@
+.bg-ls {
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: white;
+    text-align: left;
+    background-color: #000033;
+    background-image: url(http://os7.techaffinity.us/district10/public/custom/theme/images/login-page-bg.png);
+}
+.bg-ls2 {
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: white;
+    text-align: left;
+    background-color: #000033;
+}
+.cd-kk{
+    border: 0px 5px 5px 0px !important;
+    height: 4em;
+}
+.bd-er{
+    border-width: 0px 0px 1px 0px !important;
+    height: 4em;
+}
+.bd-er::before::after{
+    border-width: 0px 0px 1px 0px !important;
+    border-color: #cccccc;
+}
+
+.text-center{
+    margin-top: 2em;
+    margin-bottom: 4em;
+    }
+    .mg-10{
+        margin-top: 6em;
+    }
+    .pull-right{
+        text-align: right;
+    }
+    .mn-tps{
+        margin-bottom: 1em;
+    }
+    .btn-create{
+        margin-bottom: 1em;
+        border-radius: 2em;
+    }
+    .mt-5{
+        margin-left: -21em;
+    }
