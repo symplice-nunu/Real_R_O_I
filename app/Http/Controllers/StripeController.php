@@ -13,31 +13,22 @@ class StripeController extends Controller
      */
     public function index()
     {
-        $stripe = Stripe::latest()->paginate(5);
+        $stripee = Stripee::latest()->paginate(5);
     
-        return view('stripe.index',compact('stripe'))
+        return view('stripee.paymentlist',compact('stripee'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     
     public function create()
     {
-        return view('stripe.create');
+       
     }
 
     
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'cardnumber' => 'required',
-            
-        ]);
-    
-        Stripee::create($request->all());
-     
-        return redirect()->route('stripe.index')
-                        ->with('success','');
+      
     }
 
     /**

@@ -37,7 +37,7 @@ Route::group(['middleware' => ['auth']], function() {
 });
 Auth::routes();
 
-
+Route::resource('stripee', 'App\Http\Controllers\StripeController');
 Route::resource('contract', 'App\Http\Controllers\ContractController');
 Route::resource('houses', 'App\Http\Controllers\HousesController');
 Route::get('stripe', [StripePaymentController::class, 'stripe']);
