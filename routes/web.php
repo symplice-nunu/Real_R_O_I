@@ -9,6 +9,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\StripePaymentController;
 use App\Http\Controllers\HousesController;
 use App\Http\Controllers\ContractController;
+use App\Http\Controllers\StripeController;
   
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +37,7 @@ Route::group(['middleware' => ['auth']], function() {
 });
 Auth::routes();
 
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Route::resource('contract', 'App\Http\Controllers\ContractController');
 Route::resource('houses', 'App\Http\Controllers\HousesController');
 Route::get('stripe', [StripePaymentController::class, 'stripe']);

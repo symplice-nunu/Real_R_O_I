@@ -1,7 +1,7 @@
 <?php
    
 namespace App\Http\Controllers;
-   
+use App\Models\Stripee;
 use Illuminate\Http\Request;
 use Session;
 use Stripe;
@@ -15,7 +15,7 @@ class StripePaymentController extends Controller
      */
     public function stripe()
     {
-        return view('stripe');
+        return view('stripe.index');
     }
   
     /**
@@ -23,6 +23,11 @@ class StripePaymentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function create()
+    {
+        return view('stripe.create');
+    }
+
     public function stripePost(Request $request)
     {
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
@@ -32,9 +37,12 @@ class StripePaymentController extends Controller
                 "source" => $request->stripeToken,
                 "description" => "Payment from Real Client" 
         ]);
+        Stripee::create($request->all());
   
         Session::flash('success', 'Payment successful!');
           
         return back();
+
+        
     }
 }
