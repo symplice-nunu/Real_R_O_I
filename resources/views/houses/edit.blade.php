@@ -10,8 +10,8 @@
             </div>
             <div class="col-sm-6" style="margin-bottom: 1.5em;">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Manage Houses</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('houses.index') }}">Manage Houses</a></li>
                     <li class="breadcrumb-item">Edit</li>
                 </ol>
             </div>

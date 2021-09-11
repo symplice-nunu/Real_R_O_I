@@ -283,11 +283,11 @@ header label span{
                         <span>Manage Role</span></a>
                 </li>
                 <li>
-                    <a href="#" class="dec"><span class="las la-clipboard-list"></span>
+                    <a href="{{ route('houses.create') }}" class="dec"><span class="las la-clipboard-list"></span>
                         <span>Register House</span></a>
                 </li>
                 <li>
-                    <a href="#" class="dec"><span class="las la-clipboard-list"></span>
+                    <a href="{{ route('houses.index') }}" class="dec"><span class="las la-clipboard-list"></span>
                         <span>Manage Houses House</span></a>
                 </li>
                 <li>
@@ -295,15 +295,15 @@ header label span{
                         <span>Manage House Applications</span></a>
                 </li>
                 <li>
-                    <a href="#" class="dec"><span class="las la-clipboard-list"></span>
+                    <a href="{{ route('contract.create') }}" class="dec"><span class="las la-clipboard-list"></span>
                         <span>Make Contract</span></a>
                 </li>
                 <li>
-                    <a href="#"class="dec"><span class="las la-clipboard-list"></span>
+                    <a href="{{ route('contract.index') }}"class="dec"><span class="las la-clipboard-list"></span>
                         <span>Manage Purchase Agreement</span></a>
                 </li>
                 <li>
-                    <a href="#" class="dec"><span class="las la-clipboard-list"></span>
+                    <a href="{{ route('stripee.index') }}" class="dec"><span class="las la-clipboard-list"></span>
                         <span>Payments</span></a>
                 </li>
                 <li>

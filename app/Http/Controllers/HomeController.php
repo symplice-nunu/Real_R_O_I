@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
 class HomeController extends Controller
 {
     /**
@@ -23,6 +23,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $user = DB::table('users')->count();
+        $house = DB::table('houses')->count();
+        $stripe = DB::table('stripe')->count();
+        $contract = DB::table('contract')->count();
+        return view('home',compact('user','house','stripe','contract'));
     }
 }

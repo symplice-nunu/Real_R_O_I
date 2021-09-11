@@ -120,9 +120,9 @@
                 <div class="card-single">
                     <div>
                         <h1>
-                            40
+                            {{$user}}
                         </h1>
-                        <span>Investors</span>
+                        <span>Users</span>
                     </div>
                     <div>
                         <span class="las la-users">
@@ -133,7 +133,7 @@
                 <div class="card-single">
                     <div>
                         <h1>
-                            370
+                        {{$house}}
                         </h1>
                         <span>Houses</span>
                     </div>
@@ -146,9 +146,9 @@
                 <div class="card-single">
                     <div>
                         <h1>
-                            124
+                            {{$stripe}}
                         </h1>
-                        <span>Requested Houses</span>
+                        <span>Payments</span>
                     </div>
                     <div>
                         <span class="las la-shopping-bag">
@@ -159,9 +159,9 @@
                 <div class="card-single" style="background-color: teal;">
                     <div>
                         <h1>
-                            90
+                            {{$contract}}
                         </h1>
-                        <span>Rent Agreement</span>
+                        <span>Agreement</span>
                     </div>
                     <div>
                         <span class="lab la-google-wallet">
@@ -187,9 +187,9 @@
                         <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
 
 <script>
-var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
-var yValues = [55, 49, 44, 24, 15];
-var barColors = ["red", "green","blue","orange","brown"];
+var xValues = ["Users", "Houses", "Agreements", "payments"];
+var yValues = [{{$user}}, {{$house}}, {{$contract}}, {{$stripe}}];
+var barColors = ["red", "green","blue","orange"];
 
 new Chart("myChart", {
   type: "bar",
