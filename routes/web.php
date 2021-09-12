@@ -37,8 +37,11 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('contract', 'App\Http\Controllers\ContractController');
     Route::resource('stripee', 'App\Http\Controllers\StripeController');
     Route::resource('houses', 'App\Http\Controllers\HousesController');
+    Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
+    Route::get('generate-payment', [PDFController::class, 'generatePayment']);
+    Route::get('generate-users', [PDFController::class, 'generateUsers']);
+    Route::get('generate-contract', [PDFController::class, 'generateContract']);
 });
 Auth::routes();
 Route::get('stripe', [StripePaymentController::class, 'stripe']);
 Route::post('stripe', [StripePaymentController::class, 'stripePost'])->name('stripe.post');
-Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
