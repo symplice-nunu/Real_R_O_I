@@ -148,7 +148,7 @@
                         <h1>
                             {{$stripe}}
                         </h1>
-                        <span>Payments</span>
+                        <span>Income</span>
                     </div>
                     <div>
                         <span class="las la-shopping-bag">
@@ -231,8 +231,8 @@ new Chart("myChart", {
 <canvas id="myChartp" style="width:100%;max-width:600px"></canvas>
 
 <script>
-var xValues = ["Invested", "Sold", "ROI"];
-var yValues = [{{$invested}}, {{$sold}},{{$sold}}-{{$invested}}];
+var xValues = ["Invested", "Sold", "ROI", "Income"];
+var yValues = [{{$invested}}, {{$sold}}, ({{$sold}}-{{$invested}})/{{$invested}}, {{$sold}}-{{$invested}}];
 var barColors = [
   "#b91d47",
   "#00aba9",

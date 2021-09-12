@@ -37,7 +37,7 @@
         <div class="col-xs-12 col-sm-12 col-md-6">
             <div class="form-group">
                 <strong>House Id*</strong>
-                <input type="text" name="houseid" class="form-control" placeholder="Enter House Id">
+                <input type="text" name="houseid" class="form-control AL-N1" placeholder="Enter House Id">
                 
                 @if ($errors->has('houseid'))
                                 <span class="text-danger">{{ $errors->first('houseid') }}</span>
@@ -47,7 +47,7 @@
         <div class="col-xs-12 col-sm-12 col-md-6">
             <div class="form-group ">
                 <strong>Emp Name*</strong>
-                <input type="text" name="empname" class="form-control" placeholder="Enter Employee Name">
+                <input type="text" name="empname" class="form-control AL-N1" placeholder="Enter Employee Name">
                 
                 @if ($errors->has('empname'))
                                 <span class="text-danger">{{ $errors->first('empname') }}</span>
@@ -58,7 +58,7 @@
         <div class="col-xs-12 col-sm-12 col-md-6">
             <div class="form-group">
                 <strong>Title*</strong>
-                <input type="text" class="form-control" name="emptitle" placeholder="Enter Emp Title">
+                <input type="text" class="form-control AL-N1" name="emptitle" placeholder="Enter Emp Title">
             @if ($errors->has('emptitle'))
                                 <span class="text-danger">{{ $errors->first('emptitle') }}</span>
                                 @endif
@@ -67,7 +67,7 @@
         <div class="col-xs-12 col-sm-12 col-md-6">
             <div class="form-group">
                 <strong>Buyer Name*</strong>
-                <input type="text" class="form-control" name="buyername" placeholder="Enter Buyer Name">
+                <input type="text" class="form-control AL-N1" name="buyername" placeholder="Enter Buyer Name">
             @if ($errors->has('buyername'))
                                 <span class="text-danger">{{ $errors->first('buyername') }}</span>
                                 @endif
@@ -76,7 +76,7 @@
         <div class="col-xs-12 col-sm-12 col-md-6">
             <div class="form-group">
                 <strong>Payment Type</strong>
-                <input type="text" class="form-control" name="paymenttype" placeholder="Enter Payment">
+                <input type="text" class="form-control AL-N1" name="paymenttype" placeholder="Enter Payment">
                 
            @if ($errors->has('paymenttype'))
                                 <span class="text-danger">{{ $errors->first('paymenttype') }}</span>
@@ -86,7 +86,7 @@
         <div class="col-xs-12 col-sm-12 col-md-6">
             <div class="form-group">
                 <strong>Location</strong>
-                <input type="text" name="location" class="form-control" placeholder="Enter Location">
+                <input type="text" name="location" class="form-control AL-N1" placeholder="Enter Location">
              </div>
              @if ($errors->has('location'))
                                 <span class="text-danger">{{ $errors->first('location') }}</span>

@@ -65,7 +65,6 @@
             <th>Toilets</th>
             <th>Kitchens</th>
             <th>Extra H</th>
-            <th>Location</th>
             <th>Price</th>
             <th>Invested</th>
             <th>Picture</th>
@@ -80,7 +79,6 @@
             <td>{{ $house->numberoftb }}</td>
             <td>{{ $house->numberofkitchen }}</td>
             <td>{{ $house->extrahouses }}</td>
-            <td>{{ $house->houselocation }}</td>
             <td>{{ $house->price }}</td>
             <td>{{ $house->invested }}</td>
             <td>{{ $house->houseimage }}</td>

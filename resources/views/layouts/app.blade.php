@@ -36,6 +36,10 @@
 .dec{
     text-decoration: none;
 }
+.AL-N1{
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+}
 .bta1{
     height: 2em;
     width: 2em;
