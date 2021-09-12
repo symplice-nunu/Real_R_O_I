@@ -67,6 +67,7 @@
             <th>Extra H</th>
             <th>Location</th>
             <th>Price</th>
+            <th>Invested</th>
             <th>Picture</th>
             <th width="140px">Action</th>
         </tr>
@@ -81,6 +82,7 @@
             <td>{{ $house->extrahouses }}</td>
             <td>{{ $house->houselocation }}</td>
             <td>{{ $house->price }}</td>
+            <td>{{ $house->invested }}</td>
             <td>{{ $house->houseimage }}</td>
             <td>
     

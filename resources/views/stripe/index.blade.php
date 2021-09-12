@@ -73,7 +73,7 @@
                             <div class='col-xs-12 form-group card required'>
                                 <label class='control-label'>Price</label> 
                                 <select name="price" id="" autocomplete='off' class='form-control card-number' >
-                                    <option value="100">100$</option>
+                                    <option value="60000">60000$</option>
 
                                 </select>
                                 

@@ -160,6 +160,7 @@
                     <div>
                         <h1>
                             {{$contract}}
+                            
                         </h1>
                         <span>Agreement</span>
                     </div>
@@ -175,7 +176,7 @@
                 <div class="projects">
                     <div class="card">
                         <div class="card-header">
-                            <h3>Real Return On Investment</h3>
+                            <h3>Real Construction Comparison</h3>
                             <button>
                                 <span class="las la-arrow-right">
 
@@ -216,7 +217,7 @@ new Chart("myChart", {
                 <div class="customers">
                     <div class="card">
                         <div class="card-header">
-                            <h3></h3>
+                            <h4>ROI Comparison</h4>
                             <button>
                                 <span class="las la-arrow-right">
 
@@ -230,8 +231,8 @@ new Chart("myChart", {
 <canvas id="myChartp" style="width:100%;max-width:600px"></canvas>
 
 <script>
-var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
-var yValues = [55, 49, 44, 24, 15];
+var xValues = ["Invested", "Sold", "ROI"];
+var yValues = [{{$invested}}, {{$sold}},{{$sold}}-{{$invested}}];
 var barColors = [
   "#b91d47",
   "#00aba9",

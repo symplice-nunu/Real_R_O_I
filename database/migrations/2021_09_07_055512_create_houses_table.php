@@ -23,6 +23,7 @@ class CreateHousesTable extends Migration
             $table->string('numberofkitchen');
             $table->string('extrahouses');
             $table->string('houselocation');
+            $table->string('invested');
             $table->string('price');
             $table->string('housedescription');
             $table->string('houseimage');

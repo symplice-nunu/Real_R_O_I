@@ -7,6 +7,16 @@ use Illuminate\Http\Request;
 
 class HousesController extends Controller
 {
+
+
+    function __construct()
+    {
+         $this->middleware('permission:houses-list|houses-create|houses-edit|houses-delete', ['only' => ['index','show']]);
+         $this->middleware('permission:houses-create', ['only' => ['create','store']]);
+         $this->middleware('permission:houses-edit', ['only' => ['edit','update']]);
+         $this->middleware('permission:houses-delete', ['only' => ['destroy']]);
+    }
+
     /**
      * Display a listing of the resource.
      *

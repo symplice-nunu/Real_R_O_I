@@ -32,7 +32,7 @@ class StripePaymentController extends Controller
     {
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
         Stripe\Charge::create ([
-                "amount" => 100 * 100,
+                "amount" => 60000 * 100,
                 "currency" => "usd",
                 "source" => $request->stripeToken,
                 "description" => "Payment from Real Client" 

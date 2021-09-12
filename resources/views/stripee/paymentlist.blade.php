@@ -12,7 +12,7 @@
             </div>
             <div class="col-sm-6 pull-right" >
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                     <li class="breadcrumb-item">Payments List</li>
                 </ol>
             </div>
@@ -59,11 +59,13 @@
         <tr class="tb-cl">
             <th>Name</th>
             <th>Payments</th>
+            <th>Date</th>
         </tr>
         @foreach ($stripee as $stripe)
         <tr>
             <td>{{ $stripe->name }}</td>
             <td>{{ $stripe->price }}</td>
+            <td>{{ $stripe->created_at }}</td>
            
         </tr>
         @endforeach

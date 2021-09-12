@@ -7,6 +7,14 @@ use Illuminate\Http\Request;
 
 class ContractController extends Controller
 {
+
+    function __construct()
+    {
+         $this->middleware('permission:contract-list|contract-create|contract-edit|contract-delete', ['only' => ['index','show']]);
+         $this->middleware('permission:contract-create', ['only' => ['create','store']]);
+         $this->middleware('permission:contract-edit', ['only' => ['edit','update']]);
+         $this->middleware('permission:contract-delete', ['only' => ['destroy']]);
+    }
     /**
      * Display a listing of the resource.
      *

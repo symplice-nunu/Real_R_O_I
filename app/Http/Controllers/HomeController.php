@@ -26,7 +26,9 @@ class HomeController extends Controller
         $user = DB::table('users')->count();
         $house = DB::table('houses')->count();
         $stripe = DB::table('stripe')->count();
+        $sold = DB::table('stripe')->sum('price');
+        $invested = DB::table('houses')->sum('invested');
         $contract = DB::table('contract')->count();
-        return view('home',compact('user','house','stripe','contract'));
+        return view('home',compact('user','house','stripe','contract','sold','invested'));
     }
 }

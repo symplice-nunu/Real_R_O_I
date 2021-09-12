@@ -9,7 +9,7 @@ class Houses extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'houseid', 'city', 'numberofroom', 'numberofsaloons', 'numberoftb', 'numberofkitchen', 'extrahouses', 'houselocation', 'price', 'housedescription', 'houseimage', 'saloonimage', 'roomimage'
+        'houseid', 'city', 'numberofroom', 'numberofsaloons', 'numberoftb', 'numberofkitchen', 'extrahouses', 'houselocation', 'invested', 'price', 'housedescription', 'houseimage', 'saloonimage', 'roomimage'
     ];
 
     protected $table="houses";

@@ -113,6 +113,15 @@
       
         <div class="col-xs-12 col-sm-12 col-md-6">
             <div class="form-group">
+                <strong>Invested*</strong>
+                <input type="number" name="invested" class="form-control" placeholder="Enter Invested">
+             </div>
+             @if ($errors->has('invested'))
+                                <span class="text-danger">{{ $errors->first('invested') }}</span>
+                                @endif
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="form-group">
                 <strong>Price*</strong>
                 <input type="number" name="price" class="form-control" placeholder="Enter Price">
              </div>

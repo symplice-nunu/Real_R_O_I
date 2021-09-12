@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class StripeController extends Controller
 {
+    function __construct()
+    {
+         $this->middleware('permission:houses-list', ['only' => ['index','show']]);
+        
+    }
     /**
      * Display a listing of the resource.
      *
