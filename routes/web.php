@@ -1,7 +1,6 @@
 <?php
   
 use Illuminate\Support\Facades\Route;
-  
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
@@ -10,6 +9,7 @@ use App\Http\Controllers\StripePaymentController;
 use App\Http\Controllers\HousesController;
 use App\Http\Controllers\ContractController;
 use App\Http\Controllers\StripeController;
+use App\Http\Controllers\PDFController;
   
 /*
 |--------------------------------------------------------------------------
@@ -34,11 +34,11 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
     Route::resource('products', ProductController::class);
+    Route::resource('contract', 'App\Http\Controllers\ContractController');
+    Route::resource('stripee', 'App\Http\Controllers\StripeController');
+    Route::resource('houses', 'App\Http\Controllers\HousesController');
 });
 Auth::routes();
-
-Route::resource('stripee', 'App\Http\Controllers\StripeController');
-Route::resource('contract', 'App\Http\Controllers\ContractController');
-Route::resource('houses', 'App\Http\Controllers\HousesController');
 Route::get('stripe', [StripePaymentController::class, 'stripe']);
 Route::post('stripe', [StripePaymentController::class, 'stripePost'])->name('stripe.post');
+Route::get('generate-pdf', [PDFController::class, 'generatePDF']);

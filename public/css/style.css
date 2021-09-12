@@ -205,6 +205,7 @@ header label span{
     .main-content{
         width: 100%;
         margin-left: 0rem;
+        
     }
     #nav-toggle:checked + .sidebar {
         left: 0 !important;

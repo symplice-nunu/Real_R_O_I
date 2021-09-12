@@ -31,4 +31,6 @@ class HomeController extends Controller
         $contract = DB::table('contract')->count();
         return view('home',compact('user','house','stripe','contract','sold','invested'));
     }
+
+    
 }
