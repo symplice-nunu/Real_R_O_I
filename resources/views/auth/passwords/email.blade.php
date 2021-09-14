@@ -6,10 +6,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-        <div class="text-center">
-                    <img src="/img/real.png">
-                </div>
-            <div class="card" style="height: 20em; border-radius: 1em;">
+            <div class="card" style="height: 20em; border-radius: 1em; margin-top: 10em;">
               
 
                 <div class="card-body">

@@ -292,11 +292,11 @@ header label span{
                 </li>
                 <li>
                     <a href="{{ route('houses.index') }}" class="dec"><span class="las la-clipboard-list"></span>
-                        <span>Manage Houses House</span></a>
+                        <span>Manage Houses</span></a>
                 </li>
                 <li>
-                    <a href="#" class="dec"><span class="las la-clipboard-list"></span>
-                        <span>Manage House Applications</span></a>
+                    <a href="{{ route('sharelinklist') }}" class="dec"><span class="las la-clipboard-list"></span>
+                        <span>Share Link to Pay House</span></a>
                 </li>
                 <li>
                     <a href="{{ route('contract.create') }}" class="dec"><span class="las la-clipboard-list"></span>
@@ -309,10 +309,6 @@ header label span{
                 <li>
                     <a href="{{ route('stripee.index') }}" class="dec"><span class="las la-clipboard-list"></span>
                         <span>Payments</span></a>
-                </li>
-                <li>
-                    <a href="#" class="dec"><span class="las la-clipboard-list"></span>
-                        <span>Print Purchase Agreement</span></a>
                 </li>
             </ul>
         </div>

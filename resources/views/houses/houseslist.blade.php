@@ -42,6 +42,18 @@
         </div></td><td>
 
         </td> <br>
+    <tr>
+        <td align="right" colspan="2"> 
+            <div class="col-lg-12 margin-tb">
+            
+            <div class="pull-right"  style="margin-bottom: 1em;">
+                <a class="btn btn-success btn-create"  href="#"> Download</a>
+            </div>
+        </div></td><td>
+
+        </td> <br>
+        
+    </tr>
     </tr>
     <tr>
         <td>
@@ -81,7 +93,7 @@
             <td>{{ $house->extrahouses }}</td>
             <td>{{ $house->price }}</td>
             <td>{{ $house->invested }}</td>
-            <td>{{ $house->houseimage }}</td>
+            <td> <img src="{{ $house->houseimage }}" alt="" style="width: 2.5em; height: 2.5em; border-radius: 2em;" > </td>
             <td>
     
                 <form action="{{ route('houses.destroy',$house->id) }}" method="POST">

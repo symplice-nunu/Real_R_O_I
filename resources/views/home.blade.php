@@ -148,7 +148,7 @@
                         <h1>
                             {{$stripe}}
                         </h1>
-                        <span>Income</span>
+                        <span>Payments</span>
                     </div>
                     <div>
                         <span class="las la-shopping-bag">
@@ -186,6 +186,26 @@
                         </div>
                         <div class="card-body">
                         <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+                        <table width="100%" style="margin-top: 2em;">
+                                <thead>
+                                    <tr>
+                                        <th>Invested</th>
+                                        <th>expected benefits</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                    <tr>
+                                        <td>{{$invested}}</td>
+                                        <td>{{$expected}}</td>
+                                        <td></td>
+                                    </tr>
+                                    
+                                    
+                                    
+                                </tbody>
+
+                            </table>
 
 <script>
 var xValues = ["Users", "Houses", "Agreements", "payments"];
@@ -231,14 +251,14 @@ new Chart("myChart", {
 <canvas id="myChartp" style="width:100%;max-width:600px"></canvas>
 
 <script>
-var xValues = ["Invested", "Sold", "ROI", "Income"];
-var yValues = [{{$invested}}, {{$sold}}, ({{$sold}}-{{$invested}})/{{$invested}}, {{$sold}}-{{$invested}}];
+var xValues = ["Invested", "Sold", "ROI", "Income", "Expected Benefits", "Net loss"];
+var yValues = [{{$invested}}, {{$sold}}, ({{$sold}}-{{$invested}})/{{$invested}}*100, {{$sold}}-{{$invested}}, {{$expected}}-{{$invested}}, {{$invested}}-{{$sold}}];
 var barColors = [
   "#b91d47",
   "#00aba9",
   "#2b5797",
   "#e8c3b9",
-  "#1e7145"
+  "#1e7145",
 ];
 
 new Chart("myChartp", {

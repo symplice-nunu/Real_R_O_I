@@ -41,6 +41,19 @@
         </div></td><td>
 
         </td> <br>
+        
+    </tr>
+    <tr>
+        <td align="right" colspan="2"> 
+            <div class="col-lg-12 margin-tb">
+            
+            <div class="pull-right"  style="margin-bottom: 1em;">
+                <a class="btn btn-success btn-create"  href="#"> Download</a>
+            </div>
+        </div></td><td>
+
+        </td> <br>
+        
     </tr>
     <tr>
         <td>

@@ -5,10 +5,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-        <div class="text-center">
-                    <img src="/img/real.png">
-                </div>
-            <div class="card">
+            <div class="card" style=" margin-top: 10em;">
                 <div class="card-header" style="color:black;">{{ __('Reset Password') }}</div>
 
                 <div class="card-body">

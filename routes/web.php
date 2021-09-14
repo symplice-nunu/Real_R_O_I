@@ -10,6 +10,7 @@ use App\Http\Controllers\HousesController;
 use App\Http\Controllers\ContractController;
 use App\Http\Controllers\StripeController;
 use App\Http\Controllers\PDFController;
+use App\Http\Controllers\ApplicationController;
   
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +30,6 @@ Route::get('/', function () {
 Auth::routes();
   
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-  
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
@@ -45,3 +45,6 @@ Route::group(['middleware' => ['auth']], function() {
 Auth::routes();
 Route::get('stripe', [StripePaymentController::class, 'stripe']);
 Route::post('stripe', [StripePaymentController::class, 'stripePost'])->name('stripe.post');
+Route::get('/sharelink-form', [ApplicationController::class, 'applicationForm'])->name('sharelink-form');
+Route::get('/sharelinklist', [ApplicationController::class, 'index'])->name('sharelinklist');
+Route::post('/sharelink-form', [ApplicationController::class, 'storeApplicationForm'])->name('sharelink-form.store');

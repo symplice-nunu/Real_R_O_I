@@ -1,28 +1,26 @@
+
 @extends('layouts.app')
-
-
 @section('content')
 
-<div class="container mg-10">
+       <div class="container mg-10">
        <div class="row">
        <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h2 class="m-0 text-dark">Payments List</h2>
+                <h2 class="m-0 text-dark">Share Link</h2>
             </div>
             <div class="col-sm-6 pull-right" >
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                    <li class="breadcrumb-item">Payments List</li>
+                    <li class="breadcrumb-item">Share Link</li>
                 </ol>
             </div>
         </div>
     </div>
         <div class="col-lg-12 margin-tb">
             
-           
+            
         </div>
-        
         
     </div>
    
@@ -31,21 +29,21 @@
             <p>{{ $message }}</p>
         </div>
     @endif
-
-    <table align="right" style="margin-bottom: 1em;">
     
+<table align="right" style="margin-bottom: 1em;">
     <tr>
         <td align="right" colspan="2"> 
             <div class="col-lg-12 margin-tb">
             
             <div class="pull-right"  style="margin-bottom: 1em;">
-                <a class="btn btn-success btn-create"  href="#"> Download</a>
+                <a class="btn btn-primary btn-create"  href="{{ route('sharelink-form') }}"> Share Link</a>
             </div>
         </div></td><td>
 
         </td> <br>
         
     </tr>
+  
     <tr>
         <td>
             Search:&nbsp;
@@ -62,15 +60,17 @@
     <table class="table table-bordered"  id="myTable">
         <tr class="tb-cl">
             <th>Name</th>
-            <th>Payments</th>
-            <th>Date</th>
-        </tr>
-        @foreach ($stripee as $stripe)
+            <th>Email</th>
+            <th>Phone</th>
+            <th>House Id</th>
+            <th>Shared Link</th>
+        @foreach ($application as $contra)
         <tr>
-            <td>{{ $stripe->name }}</td>
-            <td>{{ $stripe->price }}</td>
-            <td>{{ $stripe->created_at }}</td>
-           
+            <td>{{ $contra->name }}</td>
+            <td>{{ $contra->email }}</td>
+            <td>{{ $contra->phone }}</td>
+            <td>{{ $contra-> houseid}}</td>
+            <td>{{ $contra->application }}</td>
         </tr>
         @endforeach
     </table>
@@ -101,4 +101,6 @@ function myFunction() {
   }
 }
 </script>
+@yield('content')
 @endsection
+
