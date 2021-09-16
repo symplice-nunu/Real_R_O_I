@@ -47,7 +47,7 @@
             <div class="col-lg-12 margin-tb">
             
             <div class="pull-right"  style="margin-bottom: 1em;">
-                <a class="btn btn-success btn-create"  href="#"> Download</a>
+                <a class="btn btn-success btn-create"  href="{{ url('generate-pdf') }}"> Download</a>
             </div>
         </div></td><td>
 

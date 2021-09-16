@@ -39,7 +39,7 @@
             <div class="col-lg-12 margin-tb">
             
             <div class="pull-right"  style="margin-bottom: 1em;">
-                <a class="btn btn-success btn-create"  href="#"> Download</a>
+                <a class="btn btn-success btn-create"  href="{{ url('generate-users') }}"> Download</a>
             </div>
         </div></td><td>
 
@@ -82,7 +82,7 @@
     </td>
     
     <td>
-       <!-- <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">Show</a> -->
+      
        <button style="height: 2em; width: 2em; border-radius: 2em; background-color: blue; border-color: blue;">
                         <a class="fas fa-pen" style="color: white;" href="{{ route('users.edit',$user->id) }}" ></a>
                     </button>

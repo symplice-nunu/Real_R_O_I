@@ -279,6 +279,10 @@ header label span{
            
             <ul>
                 <li>
+                    <a href="{{ route('home') }}" class="dec"><span class="las la-home"></span>
+                        <span>Home</span></a>
+                </li>
+                <li>
                     <a href="{{ route('users.index') }}" class="dec"><span class="las la-users"></span>
                         <span>Manage Users</span></a>
                 </li>

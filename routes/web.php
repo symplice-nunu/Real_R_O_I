@@ -29,7 +29,7 @@ Route::get('/', function () {
   
 Auth::routes();
   
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
@@ -39,8 +39,9 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('houses', 'App\Http\Controllers\HousesController');
     Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
     Route::get('generate-payment', [PDFController::class, 'generatePayment']);
-    Route::get('generate-users', [PDFController::class, 'generateUsers']);
+    Route::get('generate-users', [PDFController::class, 'generateUsers'])->name('generate-users');
     Route::get('generate-contract', [PDFController::class, 'generateContract']);
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
 });
 Auth::routes();
 Route::get('stripe', [StripePaymentController::class, 'stripe']);

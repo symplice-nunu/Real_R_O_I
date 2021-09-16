@@ -68,6 +68,32 @@
     border: 1px solid var(--main-color);
 
 }
+table{
+    border-collapse: collapse;
+}
+thead tr{
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+}
+thead td{
+   font-weight: 700; 
+}
+td{
+    width: 8em;
+    font-size: .9rem;
+    color: #222;
+}
+tr td:last-child{
+    display: flex;
+    align-items: center;
+}
+td .status{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
 @media only screen and (max-width: 1200px){
  
     .main-content{
@@ -191,14 +217,21 @@
                                     <tr>
                                         <th>Invested</th>
                                         <th>expected benefits</th>
+                                        <th>Sold</th>
+                                        <th>Income</th>
+                                        <th>Net Loss</th>
+                                        <th>ROI</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    
+                
                                     <tr>
                                         <td>{{$invested}}</td>
-                                        <td>{{$expected}}</td>
-                                        <td></td>
+                                        <td>{{$expected - $invested}}</td>
+                                        <td>{{$sold}}</td>
+                                        <td>{{$sold - $invested}}</td>
+                                        <td>{{$invested - $sold}}</td>
+                                        <td>{{ ($sold - $invested) * 100 / $invested}}</td>
                                     </tr>
                                     
                                     
