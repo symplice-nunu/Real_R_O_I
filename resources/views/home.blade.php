@@ -231,7 +231,7 @@ td .status{
                                         <td>{{$sold}}</td>
                                         <td>{{$sold - $invested}}</td>
                                         <td>{{$invested - $sold}}</td>
-                                        <td>{{ ($sold - $invested) * 100 / $invested}}</td>
+                                        
                                     </tr>
                                     
                                     

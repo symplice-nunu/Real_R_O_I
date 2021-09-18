@@ -291,11 +291,11 @@ header label span{
                         <span>Manage Role</span></a>
                 </li>
                 <li>
-                    <a href="{{ route('houses.create') }}" class="dec"><span class="las la-clipboard-list"></span>
+                    <a href="{{ route('products.create') }}" class="dec"><span class="las la-clipboard-list"></span>
                         <span>Register House</span></a>
                 </li>
                 <li>
-                    <a href="{{ route('houses.index') }}" class="dec"><span class="las la-clipboard-list"></span>
+                    <a href="{{ route('products.index') }}" class="dec"><span class="las la-clipboard-list"></span>
                         <span>Manage Houses</span></a>
                 </li>
                 <li>

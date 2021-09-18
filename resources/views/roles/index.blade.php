@@ -45,15 +45,15 @@
         <td>
         <button style="height: 2em; width: 2em; border-radius: 2em; background-color: blue; border-color: blue;">
             <!-- <a class="btn btn-info" href="{{ route('roles.show',$role->id) }}">Show</a> -->
-            @can('role-edit')
+            
                 <a class="fas fa-pen" href="{{ route('roles.edit',$role->id) }}" style=" color: white;"></a>
-            @endcan
+            
             </button>
-            @can('role-delete')
+            
                 {!! Form::open(['method' => 'DELETE','route' => ['roles.destroy', $role->id],'style'=>'display:inline']) !!}
                 <button type="submit" class="fas fa-trash" style="height: 2em; width: 2em; border-radius: 0.5em; background-color: red; border-color: red; color: white;"></button>
                 {!! Form::close() !!}
-            @endcan
+         
         </td>
        
     </tr>

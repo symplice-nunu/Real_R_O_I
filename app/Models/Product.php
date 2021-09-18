@@ -14,7 +14,8 @@ class Product extends Model
      *	
      * @var array
      */
+    
     protected $fillable = [
-        'name', 'detail'
+        'houseid', 'city', 'numberofroom', 'numberofsaloons', 'numberoftb', 'numberofkitchen', 'extrahouses', 'houselocation', 'invested', 'price', 'housedescription', 'houseimage', 'saloonimage', 'roomimage'
     ];
 }

@@ -8,7 +8,7 @@ class StripeController extends Controller
 {
     function __construct()
     {
-         $this->middleware('permission:houses-list', ['only' => ['index','show']]);
+         $this->middleware('permission:payment-list', ['only' => ['index','show']]);
         
     }
     /**

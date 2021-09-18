@@ -96,21 +96,19 @@
             <td> <img src="{{ $house->houseimage }}" alt="" style="width: 2.5em; height: 2.5em; border-radius: 2em;" > </td>
             <td>
     
-                <form action="{{ route('houses.destroy',$house->id) }}" method="POST">
-   
-                    <!-- <a class="btn btn-info" href="{{ route('houses.show',$house->id) }}">Show</a> -->
-                    <button style="height: 2em; width: 2em; border-radius: 2em; background-color: blue; border-color: blue;">
-                        <a class="fas fa-pen" style="color: white;" href="{{ route('houses.edit',$house->id) }}" ></a>
-                    </button>
-    
-                    
-   
-                    @csrf
-                    @method('DELETE')
-      
-                    <button type="submit" class="fas fa-trash" style="height: 2em; width: 2em; border-radius: 0.5em; background-color: red; border-color: red; color: white;"></button>
-                </form>
-            </td>
+    <form action="{{ route('houses.destroy',$house->id) }}" method="POST">
+    <button style="height: 2em; width: 2em; border-radius: 2em; background-color: teal; border-color: teal;">
+            <a class="fas fa-eye" style="color: white;" href="{{ route('houses.show',$house->id) }}" ></a>
+        </button>
+        <button style="height: 2em; width: 2em; border-radius: 2em; background-color: blue; border-color: blue;">
+            <a class="fas fa-pen" style="color: white;" href="{{ route('houses.edit',$houses->id) }}" ></a>
+        </button>
+        @csrf
+        @method('DELETE')
+
+        <button type="submit" class="fas fa-trash" style="height: 2em; width: 2em; border-radius: 0.5em; background-color: red; border-color: red; color: white;"></button>
+    </form>
+</td>
         </tr>
         @endforeach
     </table>
@@ -171,6 +169,7 @@ $("#fruitOptions").on('change', function() {
   myFunction($(this).val());
 });
 </script>
+
 @yield('content')
 @endsection
 

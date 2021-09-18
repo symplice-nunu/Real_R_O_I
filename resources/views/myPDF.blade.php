@@ -23,15 +23,15 @@
             <th width="80px" align="left">Invested</th>
             <th width="80px" align="left">Price</th>
         </tr>
-        @foreach ($house as $hous)
+        @foreach ($products as $product)
         <tr>
-           <td>{{$hous->houseid}}</td> 
-           <td>{{$hous->numberofroom}}</td> 
-           <td>{{$hous->numberofsaloons}}</td>  
-           <td>{{$hous->extrahouses}}</td> 
-           <td>{{$hous->houselocation}}</td>
-           <td>{{$hous->invested}}</td> 
-           <td>{{$hous->price}}</td>
+           <td>{{$product->houseid}}</td> 
+           <td>{{$product->numberofroom}}</td> 
+           <td>{{$product->numberofsaloons}}</td>  
+           <td>{{$product->extrahouses}}</td> 
+           <td>{{$product->houselocation}}</td>
+           <td>{{$product->invested}}</td> 
+           <td>{{$product->price}}</td>
         </tr>
         @endforeach
     </table>

@@ -43,7 +43,6 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('generate-contract', [PDFController::class, 'generateContract']);
     Route::get('/home', [HomeController::class, 'index'])->name('home');
 });
-Auth::routes();
 Route::get('stripe', [StripePaymentController::class, 'stripe']);
 Route::post('stripe', [StripePaymentController::class, 'stripePost'])->name('stripe.post');
 Route::get('/sharelink-form', [ApplicationController::class, 'applicationForm'])->name('sharelink-form');

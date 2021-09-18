@@ -25,9 +25,9 @@ class PDFController extends Controller
             'contact1' => '+250 788314255',
         ];
         
-        $house = DB::table('houses')->get();
+        $products = DB::table('products')->get();
           
-        $pdf = PDF::loadView('myPDF', $data, compact('house'));
+        $pdf = PDF::loadView('myPDF', $data, compact('products'));
     
         return $pdf->download('Houseslist.pdf');
     }

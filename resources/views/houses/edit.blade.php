@@ -29,7 +29,7 @@
     </div>
 @endif
    
-<form action="{{ route('houses.update',$house->id) }}" method="POST">
+<form action="{{ route('houses.update',$houses->id) }}" method="POST">
     @csrf
     @method('PUT')
   
