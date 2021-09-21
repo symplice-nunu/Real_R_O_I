@@ -75,7 +75,7 @@
             </div>
         <div class="col-xs-12 col-sm-12 col-md-6">
             <div class="form-group">
-                <strong>Payment Type</strong>
+                <strong>Amount</strong>
                 <input type="text" class="form-control AL-N1" name="paymenttype" placeholder="Enter Payment">
                 
            @if ($errors->has('paymenttype'))

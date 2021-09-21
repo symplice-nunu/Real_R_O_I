@@ -231,6 +231,7 @@ td .status{
                                         <td>{{$sold}}</td>
                                         <td>{{$sold - $invested}}</td>
                                         <td>{{$invested - $sold}}</td>
+                                        <td>{{ ($sold - $invested)* 100 / $invested }}</td>
                                         
                                     </tr>
                                     
@@ -285,7 +286,7 @@ new Chart("myChart", {
 
 <script>
 var xValues = ["Invested", "Sold", "ROI", "Income", "Expected Benefits", "Net loss"];
-var yValues = [{{$invested}}, {{$sold}}, ({{$sold}}-{{$invested}})/{{$invested}}*100, {{$sold}}-{{$invested}}, {{$expected}}-{{$invested}}, {{$invested}}-{{$sold}}];
+var yValues = [{{$invested}}, {{$sold}}, ({{$sold}}-{{$invested}})*100/{{$invested}}, {{$sold}}-{{$invested}}, {{$expected}}-{{$invested}}, {{$invested}}-{{$sold}}];
 var barColors = [
   "#b91d47",
   "#00aba9",

@@ -43,7 +43,7 @@ class ApplicationController extends Controller
         //     'application' => $input['application'],
         // ), function($message) use ($request){
         //     $message->from($request->email);
-        //     $message->to('intwarisymplice@gmail.com', 'Admin')->application($request->get('application'));
+        //     $message->to('symplice@techaffinity.com', 'Admin')->application($request->get('title'));
         // });
 
 

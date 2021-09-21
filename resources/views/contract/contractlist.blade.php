@@ -70,15 +70,17 @@
    <div class="container">
     <table class="table table-bordered"  id="myTable">
         <tr class="tb-cl">
+            <th>Buyer Name</th>
             <th>House Id</th>
             <th>Emp Name</th>
             <th>Emp Title</th>
-            <th>Payment Type</th>
+            <th>Amount</th>
             <th>Location</th>
             <th width="140px">Action</th>
         </tr>
         @foreach ($contract as $contra)
         <tr>
+            <td>{{ $contra->buyername }}</td>
             <td>{{ $contra->houseid }}</td>
             <td>{{ $contra->empname }}</td>
             <td>{{ $contra->emptitle }}</td>

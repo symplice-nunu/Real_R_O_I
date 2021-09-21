@@ -144,7 +144,7 @@
         <div class="col-xs-12 col-sm-12 col-md-6">
             <div class="form-group">
                 <strong>Saloon Picture</strong>
-                <input type="file" name="saloonimage" value="{{ $product->saloonimage }}" class="form-control AL-N1">
+                <input type="text" name="saloonimage" value="{{ $product->saloonimage }}" class="form-control AL-N1">
             </div>
             @if ($errors->has('saloonimage'))
                                 <span class="text-danger">{{ $errors->first('saloonimage') }}</span>
@@ -154,7 +154,7 @@
         <div class="col-xs-12 col-sm-12 col-md-6">
             <div class="form-group">
                 <strong>Room Image</strong>
-                <input type="file" name="roomimage" value="{{ $product->roomimage }}" class="form-control AL-N1">
+                <input type="text" name="roomimage" value="{{ $product->roomimage }}" class="form-control AL-N1">
             </div>
             @if ($errors->has('roomimage'))
                                 <span class="text-danger">{{ $errors->first('roomimage') }}</span>
