@@ -8,6 +8,8 @@
      <h2>{{$company}}</h2> <h4 align="right">{{$date}}</h4>
      <p>{{$location}}</p>
      <p>{{$email}}</p>
+     <p></p>
+     <!-- <img src="{{$real}}" alt=""> -->
      <p>{{$contact}} / {{$contact1}}</p>
     </div>
     <h2 align="center">{{ $title }}</h2>

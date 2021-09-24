@@ -33,7 +33,7 @@ class StripeController extends Controller
     
     public function store(Request $request)
     {
-      
+        
     }
 
     /**
@@ -42,9 +42,9 @@ class StripeController extends Controller
      * @param  \App\Models\Stripee  $stripe
      * @return \Illuminate\Http\Response
      */
-    public function show(Stripee $stripe)
+    public function show(Stripee $stripee)
     {
-        //
+        return view('stripee.show',compact('stripee'));
     }
 
     /**

@@ -64,12 +64,22 @@
             <th>Name</th>
             <th>Payments</th>
             <th>Date</th>
+            <th>Check</th>
         </tr>
         @foreach ($stripee as $stripe)
         <tr>
             <td>{{ $stripe->name }}</td>
-            <td>{{ $stripe->price }}</td>
+            <td>${{ $stripe->price }}</td>
             <td>{{ $stripe->created_at }}</td>
+            <td>
+    
+                <form action="" method="POST">
+                <button style="height: 2em; width: 2em; border-radius: 2em; background-color: teal; border-color: teal;">
+                        <a class="fas fa-eye" style="color: white;" href="{{ route('stripee.show',$stripe->id) }}" ></a>
+                    </button>
+                    
+                   </form>
+            </td>
            
         </tr>
         @endforeach

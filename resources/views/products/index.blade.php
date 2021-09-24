@@ -66,7 +66,7 @@
     </tr>
 
 </table>
-    <table class="table table-bordered">
+    <table class="table table-bordered"  id="myTable">
         <tr>
         <th>House Id</th>
             <th>City</th>
@@ -89,8 +89,8 @@
             <td>{{ $product->numberoftb }}</td>
             <td>{{ $product->numberofkitchen }}</td>
             <td>{{ $product->extrahouses }}</td>
-            <td>{{ $product->price }}</td>
-            <td>{{ $product->invested }}</td>
+            <td>${{ $product->price }}</td>
+            <td>${{ $product->invested }}</td>
             <td> <img src="{{ $product->houseimage }}" alt="" style="width: 2.5em; height: 2.5em; border-radius: 2em;" > </td> 
 	       
 
@@ -112,7 +112,29 @@
 	    </tr>
 	    @endforeach
     </table>
+    <script>
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
 
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
 
     {!! $products->links() !!}
 

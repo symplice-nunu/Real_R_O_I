@@ -24,7 +24,7 @@
         <tr>
            <td>{{$strip->id}}</td> 
            <td>{{$strip->name}}</td>    
-           <td>{{$strip->price}}</td>
+           <td>${{$strip->price}}</td>
            <td>{{$strip->created_at}}</td>
         </tr>
         @endforeach

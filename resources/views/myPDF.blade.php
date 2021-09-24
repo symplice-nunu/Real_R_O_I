@@ -30,8 +30,8 @@
            <td>{{$product->numberofsaloons}}</td>  
            <td>{{$product->extrahouses}}</td> 
            <td>{{$product->houselocation}}</td>
-           <td>{{$product->invested}}</td> 
-           <td>{{$product->price}}</td>
+           <td>${{$product->invested}}</td> 
+           <td>${{$product->price}}</td>
         </tr>
         @endforeach
     </table>

@@ -29,7 +29,7 @@
            <td>{{$contra->empname}}</td>  
            <td>{{$contra->buyername}}</td>    
            <td>{{$contra->houseid}}</td> 
-           <td>{{$contra->paymenttype}}</td>    
+           <td>${{$contra->paymenttype}}</td>    
            <td>{{$contra->location}}</td>
            <td>{{$contra->created_at}}</td>
         </tr>

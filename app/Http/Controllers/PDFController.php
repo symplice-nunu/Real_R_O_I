@@ -62,8 +62,9 @@ class PDFController extends Controller
         ];
         
         $users = DB::table('users')->get();
+        $real = DB::table('realimagee')->get();
           
-        $pdf = PDF::loadView('myUsers', $data, compact('users'));
+        $pdf = PDF::loadView('myUsers', $data, compact('users', 'real'));
     
         return $pdf->download('Userslist.pdf');
     }

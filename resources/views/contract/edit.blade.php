@@ -34,7 +34,7 @@
     @method('PUT')
   
      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-6">
+        <div class="col-xs-12 col-sm-12 col-md-6" style="margin-top: 1em;">
             <div class="form-group">
                 <strong>House Id*</strong>
                 <input type="text" name="houseid" value="{{ $contract->houseid }}" class="form-control" placeholder="Enter House Id">
@@ -44,7 +44,7 @@
                                 @endif
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-6">
+        <div class="col-xs-12 col-sm-12 col-md-6" style="margin-top: 1em;">
             <div class="form-group ">
                 <strong>Emp Name*</strong>
                 <input type="text" name="empname" value="{{ $contract->empname }}" class="form-control" placeholder="Enter Employee Name">
@@ -55,7 +55,7 @@
             </div>
         </div>
        
-        <div class="col-xs-12 col-sm-12 col-md-6">
+        <div class="col-xs-12 col-sm-12 col-md-6" style="margin-top: 1em;">
             <div class="form-group">
                 <strong>Title*</strong>
                 <input type="text" class="form-control" value="{{ $contract->emptitle }}" name="emptitle" placeholder="Enter Emp Title">
@@ -64,7 +64,7 @@
                                 @endif
         </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="col-xs-12 col-sm-12 col-md-6" style="margin-top: 1em;">
             <div class="form-group">
                 <strong>Buyer Name</strong>
                 <input type="text" class="form-control" value="{{ $contract->buyername }}" name="buyername" placeholder="Enter Payment">
@@ -74,7 +74,7 @@
                                 @endif
            </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-6">
+        <div class="col-xs-12 col-sm-12 col-md-6" style="margin-top: 1em;">
             <div class="form-group">
                 <strong>Payment Type</strong>
                 <input type="text" class="form-control" value="{{ $contract->paymenttype }}" name="paymenttype" placeholder="Enter Payment">
@@ -84,7 +84,7 @@
                                 @endif
            </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-6">
+        <div class="col-xs-12 col-sm-12 col-md-6" style="margin-top: 1em;">
             <div class="form-group">
                 <strong>Location</strong>
                 <input type="text" name="location" value="{{ $contract->location }}" class="form-control" placeholder="Enter Location">
@@ -94,7 +94,7 @@
                                 @endif
         </div>
         
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 1em;">
                 <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </div>

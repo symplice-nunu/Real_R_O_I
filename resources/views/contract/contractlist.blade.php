@@ -84,7 +84,7 @@
             <td>{{ $contra->houseid }}</td>
             <td>{{ $contra->empname }}</td>
             <td>{{ $contra->emptitle }}</td>
-            <td>{{ $contra-> paymenttype}}</td>
+            <td>${{ $contra-> paymenttype}}</td>
             <td>{{ $contra->location }}</td>
             <td>
     
@@ -108,6 +108,7 @@
     </div>
        </div>    </div>
        
+
        <script>
 function myFunction() {
   // Declare variables
@@ -116,8 +117,6 @@ function myFunction() {
   filter = input.value.toUpperCase();
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
-
-  // Loop through all table rows, and hide those who don't match the search query
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[0];
     if (td) {
@@ -130,36 +129,6 @@ function myFunction() {
     }
   }
 }
-function myFunction(searchTerm) {
-  var input, filter, table, tr, td, i;
-  filter = searchTerm.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  // Loop through all table rows, and hide those who don't match the search query
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-  }
-}
-
-var options = $("#fruitOptions");
-$("#myTable tr:not(.header)").each(function() {
-  options.append($("<option />").val($(this).find("td:first-child").text()).text($(this).find("td:first-child").text()));
-});
-
-$("#myInput").on('input', function() {
-  myFunction($(this).val());
-});
-
-$("#fruitOptions").on('change', function() {
-  myFunction($(this).val());
-});
 </script>
 @yield('content')
 @endsection
