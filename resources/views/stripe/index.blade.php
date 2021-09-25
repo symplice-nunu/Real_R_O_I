@@ -72,12 +72,8 @@
                         <div class='form-row row'>
                             <div class='col-xs-12 form-group card required'>
                                 <label class='control-label'>Price</label> 
-                                <select name="price" id="" autocomplete='off' class='form-control card-number' >
-                                    <option value="60000">60000$</option>
-
-                                </select>
+                                <input class='form-control' size='4' type='text' name="price">
                                 
-                               
                             </div>
                         </div>
   

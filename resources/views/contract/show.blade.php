@@ -8,18 +8,16 @@
         <hr>
         <br>
         <p>
-        This Real Estate Purchase Agreement (this “Agreement”) is entered into as of the _____ day of <br>
-         _______________, 20_____ by and among/between:
-        </p>
+        This Real Estate Purchase Agreement (this “Agreement”) is entered into as of the <u>{{ $contract->created_at }}</u> 
         <p>
-        Seller: ________________________, a/an (Check one)   ☐   individual   ☐   corporation   ☐   limited <br>
+        Seller: <u>Real Construction</u>, a/an (Check one)   ☐   individual   ☐   corporation   ☐   limited <br>
          liability company    ☐   partnership   ☐   limited partnership   ☐   limited liability partnership   ☐   a trust <br>
-          located at ________________________________________ [Address] (“Seller”) and
+          located at <u>KK 705 St, Kigali</u> [Address] (“Seller”) and
         </p>
         <p>
-        Buyer: ________________________, a/an (Check one)   ☐   individual   ☐   corporation   ☐   limited <br>
+        Buyer: <u>{{ $contract->buyername }}</u>, a/an (Check one)   ☐   individual   ☐   corporation   ☐   limited <br>
          liability company   ☐   partnership   ☐   limited partnership   ☐   limited liability partnership   ☐   a trust <br>
-          located at ________________________________________ [Address] (“Buyer”).
+          located at <u>{{ $contract->location }}</u> [Address] (“Buyer”).
         </p>
         <p>
         Each Seller and Buyer may be referred to in this Agreement individually as a “Party” and collectively as <br>
@@ -29,8 +27,7 @@
         1. Property. Seller hereby agrees to sell to Buyer, and Buyer hereby agrees to purchase from Seller (the <br>
          “Transaction”), all of Seller’s right, title and interest in the real property located at <br>
     
-________________________________________ [Property address], and the legal description:  <br>  
-_____________________________________________________________________ (the “Property”).
+KIGALI, KICUKIRO [Property address],
 
         </p>
         <p>
@@ -46,7 +43,7 @@ _____________________________________________________________________ (the “Pr
 
         </p>
         <p>
-        3. Purchase Price.  The purchase price for the Property is $__________ (the “Purchase Price”) payable <br>
+        3. Purchase Price.  The purchase price for the Property is $120000 (the “Purchase Price”) payable <br>
          by Buyer as follows: <br>
 
 (A) Earnest Money Deposit. $__________ (the “Deposit”), due upon the signing of this Agreement, the <br>
@@ -300,7 +297,7 @@ In accordance with the required disclosures under this Agreement, Seller shall p
          condition on the date of the Closing as of the date that Buyer’s final inspection is completed.
         </p>
         <p>
-        22. Miscellaneous. _________________________________________________________________________________________ <br>
+        22. Miscellaneous. _____________________________________________________________ <br>
          ______________________________________________________  <br> <br>
 
 
@@ -309,47 +306,29 @@ IN WITNESS WHEREOF, the Parties hereto, individually or by their duly authorized
 
         </p> <br>
         <p>
-________________________        ____________________________   		  
-Seller Signature	        	Seller Full Name
+REAL CONSTRUCTION <br> 		  
+
 
         </p>
         <p>
-_________________________________________       ______________________________________________          		  
-Seller’s Representative/Trustee Signature		Seller’s Representative/Trustee Name and Title
-
-        </p>
-
-        <p>
-________________________    ________________________ 		 
-Buyer Signature		        Buyer Full Name
+_________________________________________  &nbsp &nbsp    {{ $contract->empname }}          		  
+ <br> Seller’s Representative/Trustee Signature	&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp	Seller’s Representative/Trustee Name and Title
 
         </p>
 
         <p>
-_________________________________________       _________________________________________     		  
-Buyer’s Representative/Trustee Signature		Buyer’s Representative/Trustee Name and Title
+________________________    &nbsp &nbsp    {{ $contract->buyername }}  	<br>	 
+Buyer Signature	&nbsp &nbsp &nbsp &nbsp   &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp	        Buyer Full Name
+
+        </p>
+
+        <p>
+_________________________________________       _________________________________________  <br>   		  
+Buyer’s Representative/Trustee Signature	&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp	Buyer’s Representative/Trustee Name and Title
 
         </p>
         </div>
     </div>
    
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong></strong>
-                {{ $contract->houseid }}
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                {{ $contract->empname }}
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                {{ $contract->emptitle }}
-            </div>
-        </div>
-    </div>
     </div>
 @endsection

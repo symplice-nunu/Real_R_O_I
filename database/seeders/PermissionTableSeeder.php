@@ -32,6 +32,8 @@ class PermissionTableSeeder extends Seeder
            'contract-edit',
            'contract-delete',
            'payment-list',
+           'payment-create',
+           'payment-edit',
         ];
      
         foreach ($permissions as $permission) {

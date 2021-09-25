@@ -283,6 +283,10 @@ header label span{
                         <span>Home</span></a>
                 </li>
                 <li>
+                    <a href="{{ route('dashboard') }}" class="dec"><span class="las la-clipboard-list"></span>
+                        <span>Dashboard</span></a>
+                </li>
+                <li>
                     <a href="{{ route('users.index') }}" class="dec"><span class="las la-users"></span>
                         <span>Manage Users</span></a>
                 </li>

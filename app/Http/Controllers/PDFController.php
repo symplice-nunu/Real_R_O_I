@@ -61,10 +61,8 @@ class PDFController extends Controller
             'contact1' => '+250 788314255',
         ];
         
-        $users = DB::table('users')->get();
-        $real = DB::table('realimagee')->get();
-          
-        $pdf = PDF::loadView('myUsers', $data, compact('users', 'real'));
+        $users = DB::table('users')->get();          
+        $pdf = PDF::loadView('myUsers', $data, compact('users'));
     
         return $pdf->download('Userslist.pdf');
     }

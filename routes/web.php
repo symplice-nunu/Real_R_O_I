@@ -11,18 +11,8 @@ use App\Http\Controllers\ContractController;
 use App\Http\Controllers\StripeController;
 use App\Http\Controllers\PDFController;
 use App\Http\Controllers\ApplicationController;
-  
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-  
+use App\Http\Controllers\DashboardController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -42,6 +32,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('generate-users', [PDFController::class, 'generateUsers'])->name('generate-users');
     Route::get('generate-contract', [PDFController::class, 'generateContract']);
     Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
 Route::get('stripe', [StripePaymentController::class, 'stripe']);
 Route::post('stripe', [StripePaymentController::class, 'stripePost'])->name('stripe.post');

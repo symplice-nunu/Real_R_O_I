@@ -136,7 +136,7 @@ function myFunction() {
 }
 </script>
 
-    {!! $products->links() !!}
+    <!-- {!! $products->links() !!} -->
 
 
 

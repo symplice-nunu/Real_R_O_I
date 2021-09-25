@@ -65,21 +65,21 @@
  <tr>
    <th>Name</th>
    <th>Email</th>
-   <th>Roles</th>
+   <!-- <th>Roles</th> -->
    <th width="100px">Action</th>
  </tr>
  @foreach ($data as $key => $user)
   <tr>
     <td>{{ $user->name }}</td>
     <td>{{ $user->email }}</td>
-    <td>
+    <!-- <td>
       @if(!empty($user->getRoleNames()))
         @foreach($user->getRoleNames() as $v)
            <label class="badge badge-success">{{ $v }}</label>
         @endforeach
       @endif
       
-    </td>
+    </td> -->
     
     <td>
       
@@ -97,14 +97,11 @@
 
 <script>
 function myFunction() {
-  // Declare variables
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
-
-  // Loop through all table rows, and hide those who don't match the search query
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[0];
     if (td) {
@@ -118,7 +115,5 @@ function myFunction() {
   }
 }
 </script>
-
 {!! $data->render() !!}
-
 @endsection
