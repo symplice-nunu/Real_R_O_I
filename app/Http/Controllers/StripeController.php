@@ -27,10 +27,11 @@ class StripeController extends Controller
     
     public function create()
     {
-       
-    }
-
+        $stripee = Stripee::latest()->paginate(5);
     
+        return view('stripee.create',compact('stripee'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
+    }
     public function store(Request $request)
     {
         
@@ -55,7 +56,6 @@ class StripeController extends Controller
      */
     public function edit(Stripee $stripe)
     {
-        //
     }
 
     /**

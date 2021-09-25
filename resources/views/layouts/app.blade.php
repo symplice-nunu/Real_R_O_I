@@ -314,6 +314,10 @@ header label span{
                     <a href="{{ route('stripee.index') }}" class="dec"><span class="las la-clipboard-list"></span>
                         <span>Payments</span></a>
                 </li>
+                <li>
+                    <a href="{{ url('stripe') }}" class="dec"><span class="las la-clipboard-list"></span>
+                        <span>Personal Payment</span></a>
+                </li>
             </ul>
         </div>
     </div>

@@ -7,41 +7,41 @@
 
 <div class="container">
    
-<table class="table" style="margin-top: 2em;" id="tblMembers" border="0">
+<table class="table" style="margin-top: 2em;" id="tblMembers" >
 
   <thead>
      <tr>
-         <td> <span>
+         <td colspan="3"> <span>
 <img src="/img/real.png" alt="" style="width: 7em;">
       </span></td>
      </tr>
      <tr>
-         <td>
+         <td colspan="3">
       <p>Real Construction</p>
 
          </td>
      </tr>
      <tr>
-         <td>
+         <td colspan="3">
       <p>KK 705 St, Kigali</p>
              
          </td>
      </tr>
      <tr>
-         <td>
+         <td colspan="3">
       <p>info@real.rw</p>
              
          </td>
      </tr>
      <tr>
-         <td>
+         <td colspan="3">
       <p>+250 788306817 / +250 788314255</p>
              
          </td>
      </tr>
       <br>
      <tr>
-         <td>
+         <td colspan="3">
       <h3 align="center">Payment Process for<strong>
            {{ $stripee->name }}
       </strong></h3>  
@@ -73,7 +73,11 @@
     </tr>
     <td scope="row" colspan="3" align="center">{{ $stripee->created_at}}</td>
     </tr>
+
   </tbody>
+  <tr>
+      <td colspan="3"> <b>{{ Auth::user()->name }}</b> </td>
+  </tr>
 </table>
 
 <br />

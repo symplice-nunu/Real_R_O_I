@@ -109,6 +109,10 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now</button>
+
+                            <div class="btn btn-success" style="margin-top: 1em;"><a style="color: white; text-decoration: none;" href="{{ route('stripee.create') }}" >Check</a></div>
+                            <div class="btn btn-primary" style="margin-top: 1em;"><a style="color: white; text-decoration: none;" href="{{ route('home') }}" >back</a></div>
+       
                             </div>
                         </div>
                           
